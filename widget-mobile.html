@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Виджеты для сайтов</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Knopka -->
+
+
+    <div class="wb-social-widget" title="Свяжитесь с нами">
+        <a href="#" id="wb-social-trigger" onclick="ym(XXXXXX, 'reachGoal', 'social_widget_open'); return true;" ><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
+        <div class="wb-social-button">
+            <div class="wb-social-container">
+                <div class="wb-social-link">
+                    <div class="wb-social-item"><a href="#" onclick="ym(XXXXXX, 'reachGoal', 'social_widget_link'); return true;"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="wb-social-item"><a href="#" onclick="ym(XXXXXX, 'reachGoal', 'social_widget_link'); return true;"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></div>
+                    <div class="wb-social-item"><a href="#" onclick="ym(XXXXXX, 'reachGoal', 'social_widget_link'); return true;"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Knopka end -->
+
+
+    <!-- Scripts end -->
+
+    <!-- Style -->
+    <style>
+        .wb-social-widget {
+            box-sizing: border-box;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            width: 50px;
+            height: 50px;
+            background: #BB313F;
+            border-radius: 50%;
+            /* animation */
+            animation: pulse 2s infinite;
+        }
+
+        #wb-social-trigger {position: relative;right: 7px;top: 1px;}
+        .wb-social-button {display: none;}
+        .wb-social-container {display: flex;padding: 5px;border-radius: 0px 20px 20px 0px;}
+
+        .wb-social-link {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .wb-social-item {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            border: 1px solid #BB313F;
+            background: #FFF;
+           
+        }
+        .wb-social-item .fa{
+         color: #BB313F; 
+        }
+
+        .wb-social-item:hover{
+            background-color: #BB313F;
+        }
+        .wb-social-item:hover .fa{
+            color: #fff
+        }
+        /* Цвет иконки */
+        .fa {
+            color: white;
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+            }
+
+            70% {
+                -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+            }
+
+            100% {
+                -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+                box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+            }
+
+            70% {
+                -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+                box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+            }
+
+            100% {
+                -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+                box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+            }
+        }
+    </style>
+    <!-- Style end -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>
+    $("#wb-social-trigger").click(function () {
+        $(this).children('i.fa').toggleClass('fa-plus fa-minus');
+        $(".wb-social-button").toggle("slow", function () {
+        });
+    });
+
+</script>
+
+</html>
